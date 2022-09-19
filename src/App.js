@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { commerce } from "./library/commerce";
 
 import { Products, Navbar, Cart, Checkout } from "./components";
-import { useState, useEffect } from "react";
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const App = () => {
   const [products, setProducts] = useState([]);
@@ -40,10 +40,10 @@ const App = () => {
     setCart(newCart);
   };
 
-  const handleCaptureCheckout = async (checkoutTokkenId, newOrder) => {
+  const handleCaptureCheckout = async (checkoutTokenId, newOrder) => {
     try {
       const incomingOrder = await commerce.checkout.capture(
-        checkoutTokkenId,
+        checkoutTokenId,
         newOrder
       );
 

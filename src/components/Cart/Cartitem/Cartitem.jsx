@@ -8,7 +8,7 @@ import {
   CardMedia,
 } from "@material-ui/core";
 import useStyles from "./styles";
-const CartItem = ({ item, onRemoveFromCart, onUpdateCart }) => {
+const CartItem = ({ item, onUpdateCart, onRemoveFromCart }) => {
   const classes = useStyles();
   return (
     <Card>
@@ -33,6 +33,7 @@ const CartItem = ({ item, onRemoveFromCart, onUpdateCart }) => {
           <Typography>{item.quantity}</Typography>
           <Button
             type="button"
+            
             size="small"
             onClick={() => onUpdateCart(item.id, item.quantity + 1)}
           >
