@@ -4,8 +4,7 @@ import {
   Toolbar,
   IconButton,
   Badge,
-  
-  Typography
+  Typography,
 } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";
 import { Link, useLocation } from "react-router-dom";
