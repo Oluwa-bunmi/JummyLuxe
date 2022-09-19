@@ -18,7 +18,7 @@ const CartItem = ({ item, onUpdateCart, onRemoveFromCart }) => {
         className={classes.media}
       />
       <CardContent className={classes.cardContent}>
-        <Typography variant="h4">{item.name}</Typography>
+        <Typography variant="h5">{item.name}</Typography>
         <Typography variant="h5">{item.price.formatted_with_symbol}</Typography>
       </CardContent>
       <CardActions className={classes.cardActions}>
