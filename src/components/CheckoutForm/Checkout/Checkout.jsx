@@ -25,6 +25,7 @@ const Checkout = ({ cart, order, onCaptureCheckout, error, }) => {
   const [isFinished, setisFinished] = useState(false);
   const classes = useStyles();
   const history = useNavigate();
+  
   useEffect(() => {
     const generateToken = async () => {
       try {
